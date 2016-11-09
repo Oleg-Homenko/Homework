@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <style>
+        fieldset{
+            margin: 20px;
+
+        }
+    </style>
+</head>
+<body>
+<h1>Урок "Формы": теги и их атрибуты.</h1>
+<h2>Расскажите немного о себе...</h2>
+<p>Попробуйте создать аналогичную форму. Для целей демонстрации вполне подойдут и вымышленные.</p>
+
+<form action="page.html" method="POST">
+    <fieldset>
+        <legend><b>Коротко о себе</b></legend>
+        <ul style="list-style:none; padding:0">
+            <li>Имя:<input type="text" required size="25"/></label></li>
+            <li><label>Фамилия:<input type="text" required/></label></li>
+            <li>Пол:
+                <label><input type="radio" name="sex"/>мужской</label>
+                <label><input type="radio" name="sex"/>женский</label>
+            </li>
+            <li><label>Возраст:<input type="number" min="18" max="100"/> лет</label></li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend><b>Подробнее о себе</b></legend>
+        <ul style="list-style:none; padding:0">
+            <li><label><input type="radio" name="relations"/>Молодой человек</label></li>
+            <li><label><input type="radio" name="relations"/>Девушка</label></li>
+            <li><label><input type="date"/> Дата рождения</label></li>
+            <li><label><input type="text"/> Семейное положение</label></li>
+            <li><label><input type="text"/> Социальный статус</label></li>
+            <li><label><input type="text"/> Местожительство</label></li>
+        </ul>
+        <h4>Что вы обычно делаете на выходных:</h4>
+        <ul style="list-style:none; padding:0">
+            <li><label><input type="checkbox"/>Сплю</label></li>
+            <li><label><input type="checkbox"/>Гуляю с друзьями</label></li>
+            <li><label><input type="checkbox"/>Хожу на рыбалку</label></li>
+            <li><label><input type="checkbox"/>Играю в игры</label></li>
+        </ul>
+
+        <h4><label for="forms-book">Рассказать о формах в книге, посвященной HTML</label></h4>
+        <select id="forms-book">
+            <option>Site frequence 1</option>
+            <option>Site frequence 2</option>
+            <option>Site frequence 3</option>
+        </select>
+
+        <h4>Сколько книг вы прочитали за свою жизнь?</h4>
+        <ul style="list-style:none; padding:0">
+            <li><label><input type="radio" name="numbers-books"/>0-10</label></li>
+            <li><label><input type="radio" name="numbers-books"/>11-20</label></li>
+            <li><label><input type="radio" name="numbers-books"/>21-50</label></li>
+            <li><label><input type="radio" name="numbers-books"/>50+</label></li>
+        </ul>
+
+        <h4><label for="comment">Ваши комментарии:</label></h4>
+        <ul style="list-style:none; padding:0">
+            <li><textarea id="comment" cols="70" rows="12"></textarea></li>
+            <li>
+                <select multiple>
+                    <option>Первая позиция</option>
+                    <option>Вторая позиция</option>
+                    <option>Третья позиция</option>
+                </select>
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend><b>И в заключении</b></legend>
+        <input type="text" placeholder="Это поле было введено до вас" size="25"/>
+        <ul style="list-style: none;padding:0">
+            <li><label for="mail"><b>Email:</b></label></li>
+            <li><input id="mail" type="email" required size="25"></li>
+        </ul>
+        <h4 style="display:inline;">Хотите подписаться на самую модную рассылку спама?</h4>
+        <div><em>Выберите категории</em></div>
+        <ul style="list-style:none; padding:0">
+            <li><label><input type="checkbox"/>Оборудование</label></li>
+            <li><label><input type="checkbox"/>Как приготовить обеды</label></li>
+            <li><label><input type="checkbox"/>Заработай миллион за два дня!</label></li>
+        </ul>
+        <h4>На сколько сложная задача:</h4>
+        <ul style="list-style:none; padding:0">
+            <li><label><input type="radio" name="level-task"/>Совсем нет</label></li>
+            <li><label><input type="radio" name="level-task"/>Так себе</label></li>
+            <li><label><input type="radio" name="level-task"/>Еле справились</label></li>
+        </ul>
+    </fieldset>
+
+    <p><button type="submit">Отправить</button></p>
+</form>
+
+</body>
+</html>
